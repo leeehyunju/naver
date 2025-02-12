@@ -1,0 +1,120 @@
+/* 공통소스 */
+
+
+#skipNav{
+    position: absolute;
+    top: 0;left: 0;
+}
+#skipNav a{
+    position: absolute;
+    /* 줄바꿈하지마세요 라는 코드 */
+    white-space: nowrap;
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    top: -50px;
+}
+/* a에 포커스가 갔을때(tab으로 접근했을때) */
+#skipNav a:focus,
+#skipNav a:active{
+    top: 0;
+}
+
+/* a:hover{
+    text-decoration: underline;
+} */
+
+.frame{
+    background-color: #fff;
+    background-color: var(--color_block_bg);
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #e3e5e8,0 1px 2px 0 rgba(0,0,0,.04);
+}
+.frame+.frame{
+    margin-top: 16px;
+}
+
+
+/* sound-only */
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+}
+
+.border-frame::before{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    right: 0;bottom: 0;
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+
+
+
+
+/* 스프라이트 이미지 쓰는법 */
+#header .menu-area .ic-service::before,
+.setting-area .setting-box .link-install .install-text::before,
+.setting-area .setting-box .link-install .ic-logo::before,
+.fix-btn .btn-fix.setting::before,
+.fix-btn .btn-fix.top::before,
+.sc-shopping .group-control .btn::before,
+.sc-login .link-login::before,
+.sc-news .group-control .btn::before,
+.sc-news .group-control .btn-thumb::before,
+.sc-news .group-control .btn-list::before,
+.sc-news .group-issue .btn-all::after,
+#header .menu-area .icon::after,
+#header .menu-area .icon::before,
+#header .search-area .btn-keyboard::after,
+#header .search-area .btn-auto::after,
+#header .util-area [class*="btn-"]::after{
+    background-image: url('../images/sp-bg.png');
+    background-repeat: no-repeat;
+    background-size: 463px 440px;
+}
+
+
+/* 새로운배경 */
+.sc-shopping .group-commerce .menu-item [class*="ic-"]::after
+{
+    background-image: url(../images/sp-bg2.png);
+    background-repeat: no-repeat;
+    background-size: 158px 137px;
+   
+}
+
+
+.sc-weather-inner .group-info .icon::after,
+.sc-weather-inner .right-area .weather-item .icon::after
+{
+    background-image: url(../images/sp-bg3.png);
+    background-repeat: no-repeat;
+    background-size: 641px 587px;
+}
+
+
+.sc-weather-inner .group-header .link:before,
+.sc-stock .group-info .right-area .price .ic-status.high,
+.sc-stock .group-info .right-area .price .ic-status,
+.sc-stock-inner .group-header .aside .btn-refresh::after,
+.sc-stock-inner .group-header .btn-info::after,
+.sc-news .group-header .tab-item .live::before,
+.sc-widget .vibe .group-top .btn-refresh::after,
+.sc-widget .vibe .group-top .ic-vibe::after,
+#footer .notice-area .link-all::after,
+.sc-widget .link-open:after,
+.sc-widget .link-open:before,
+.sc-widget .vibe .vibe-item .ic-play::after,
+.sc-stock .group-info .right-area .link-more::after,
+.sc-stock-inner .group-info .gap .ic-status::after
+{
+    background-image: url(../images/sp-bg4.png);
+    background-repeat: no-repeat;
+    background-size: 463px 440px;
+}
